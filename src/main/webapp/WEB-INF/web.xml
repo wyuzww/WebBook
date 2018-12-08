@@ -40,4 +40,22 @@
         <url-pattern>/userManager</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>loginOut</servlet-name>
+        <jsp-file>/WEB-INF/views/exit.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginOut</servlet-name>
+        <url-pattern>/exit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userInfo</servlet-name>
+        <jsp-file>/WEB-INF/views/userInfo.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userInfo</servlet-name>
+        <url-pattern>/userInfo</url-pattern>
+    </servlet-mapping>
+
 </web-app>

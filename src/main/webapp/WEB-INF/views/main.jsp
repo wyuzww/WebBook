@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.ethan.entity.User" %>
+<%@ page %><%--
   Created by IntelliJ IDEA.
   User: Ethan
   Date: 2018/12/3
@@ -15,6 +16,11 @@
             response.sendRedirect("index.jsp");
             return;
         }
+        User currentUser = (User) session.getAttribute("currentUser");
+        if (currentUser.getUser_level().equals("读者")) {
+            request.getRequestDispatcher("WEB-INF/views/reader.jsp").forward(request, response);
+        }
+
     %>
     <link rel="stylesheet" type="text/css" href="resources/jquery-easyui-1.6.10/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="resources/css/default.css">
@@ -24,13 +30,24 @@
     <script type="text/javascript" src="resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="resources/js/default.js"></script>
 <script type="text/javascript">
-
+    function exit() {
+        $.messager.confirm("系统提示", "您确认要注销登录吗？", function (r) {
+            if (r) {
+                location.replace("exit");
+            }
+        });
+    }
 </script>
 </head>
 <body class="easyui-layout">
 <div region="north" style="height: 85px;background-color: #E0EDFF">
 
-    <div style=" float: right;padding-top: 60px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${currentUser.name }</font></div>
+    <div style=" float: right;padding-top: 55px;padding-right: 10px;">
+        <font color="red">${currentUser.user_name }</font>
+        ,欢迎您！
+        <a href="javascript:(0)" style="background-color: white" onclick="exit()"><font color="#0E2D5F">注销</font></a>
+        <%--<a href="javascript:(0)" class="easyui-linkbutton" iconCls="icon-no" style="height:20px"  >注销</a>--%>
+    </div>
     <div align="left" style="height: 100%"><img src="resources/images/main1.jpg"></div>
 </div>
 <div data-options="region: 'center'" >

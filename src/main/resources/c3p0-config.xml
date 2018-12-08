@@ -4,7 +4,8 @@
         <property name="user">root</property>
         <property name="password">root</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/webbook</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/webbook?useUnicode=true&amp;characterEncoding=UTF-8
+        </property>
         <!-- 以上的user是数据库的用户，?useUnicode=true&amp;characterEncoding=UTF-8
         password是数据库的密码，driverClass是mysql的数据库驱动，
         dbcUrl是连接数据库的url -->  

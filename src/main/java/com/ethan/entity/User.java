@@ -4,104 +4,104 @@ package com.ethan.entity;
  * User
  */
 public class User {
-    private int id;
-    private String account;
-    private String password;
-    private String name;
-    private String sex;
-    private String phone;
-    private String photo;
-    private int level;
+    private int user_id;
+    private String user_account;
+    private String user_password;
+    private String user_name;
+    private String user_sex;
+    private String user_phone;
+    private String user_photo;
+    private String user_level;
 
     public User() {
     }
 
-    public User(int id, String account, String password, String name, String sex, String phone, String photo, int level) {
-        this.id = id;
-        this.account = account;
-        this.password = password;
-        this.name = name;
-        this.sex = sex;
-        this.phone = phone;
-        this.photo = photo;
-        this.level = level;
+    public User(int user_id, String user_account, String user_password, String user_name, String user_sex, String user_phone, String user_photo, String user_level) {
+        this.user_id = user_id;
+        this.user_account = user_account;
+        this.user_password = user_password;
+        this.user_name = user_name;
+        this.user_sex = user_sex;
+        this.user_phone = user_phone;
+        this.user_photo = user_photo;
+        this.user_level = user_level;
     }
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public String getAccount() {
-        return account;
+    public String getUser_account() {
+        return user_account;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setUser_account(String user_account) {
+        this.user_account = user_account;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
     }
 
-    public String getName() {
-        return name;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getUser_sex() {
+        return user_sex;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setUser_sex(String user_sex) {
+        this.user_sex = user_sex;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getUser_phone() {
+        return user_phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setUser_phone(String user_phone) {
+        this.user_phone = user_phone;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getUser_photo() {
+        return user_photo;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setUser_photo(String user_photo) {
+        this.user_photo = user_photo;
     }
 
-    public int getLevel() {
-        return level;
+    public String getUser_level() {
+        return user_level;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setUser_level(String user_level) {
+        this.user_level = user_level;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", account='" + account + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", phone='" + phone + '\'' +
-                ", photo='" + photo + '\'' +
-                ", level=" + level +
+                "user_id=" + user_id +
+                ", user_account='" + user_account + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", user_name='" + user_name + '\'' +
+                ", user_sex='" + user_sex + '\'' +
+                ", user_phone='" + user_phone + '\'' +
+                ", user_photo='" + user_photo + '\'' +
+                ", user_level='" + user_level + '\'' +
                 '}';
     }
 }

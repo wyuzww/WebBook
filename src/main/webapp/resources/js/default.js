@@ -11,7 +11,7 @@ var _menus = {
             {
                 "menuid": "12",
                 "menuname": "个人信息",
-                "url": "#"
+                "url": "userInfo"
             }
         ]
     }, {
