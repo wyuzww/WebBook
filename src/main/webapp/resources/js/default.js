@@ -20,17 +20,17 @@ var _menus = {
         "menus": [{
             "menuid": "21",
             "menuname": "管理图书",
-            "url": "#"
+            "url": "bookManager"
             },
             {
                 "menuid": "22",
                 "menuname": "管理书库",
-                "url": "#"
+                "url": "bookRoomManager"
             },
             {
                 "menuid": "23",
                 "menuname": "管理图书类别",
-                "url": "#"
+                "url": "bookCatagoryManager"
             }
         ]
     }, {
@@ -39,12 +39,12 @@ var _menus = {
         "menus": [{
             "menuid": "31",
             "menuname": "借阅证管理",
-            "url": "#"
+            "url": "bookManager"
             },
             {
                 "menuid": "32",
                 "menuname": "罚款管理",
-                "url": "#"
+                "url": "bookManager"
             }
         ]
     }, {
@@ -53,12 +53,12 @@ var _menus = {
             "menus": [{
                 "menuid": "41",
                 "menuname": "借书",
-                "url": "#"
+                "url": "bookManager"
             },
                 {
                     "menuid": "42",
                     "menuname": "还书",
-                    "url": "#"
+                    "url": "bookManager"
                 }
             ]
         }

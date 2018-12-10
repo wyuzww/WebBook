@@ -1,6 +1,7 @@
 package com.ethan.service;
 
 import com.ethan.entity.Book;
+import com.ethan.entity.Book_Catagory_Room;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -15,7 +16,7 @@ public interface BookService {
      * @return
      * @throws SQLException
      */
-    public List<Book> allBook(int page, int rows) throws SQLException;
+    public List<Book_Catagory_Room> allBook(Book book, int page, int rows) throws SQLException;
 
     /**
      * @param book
@@ -51,10 +52,8 @@ public interface BookService {
 
     /**
      * 删除
-     *
-     * @param book
      * @return
      * @throws SQLException
      */
-    public int deleteBook(Book book) throws SQLException;
+    public int deleteBook(String ids) throws SQLException;
 }

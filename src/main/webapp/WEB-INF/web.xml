@@ -58,4 +58,31 @@
         <url-pattern>/userInfo</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>bookManager</servlet-name>
+        <jsp-file>/WEB-INF/views/bookManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bookManager</servlet-name>
+        <url-pattern>/bookManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bookRoomManager</servlet-name>
+        <jsp-file>/WEB-INF/views/bookRoomManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bookRoomManager</servlet-name>
+        <url-pattern>/bookRoomManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bookCatagoryManager</servlet-name>
+        <jsp-file>/WEB-INF/views/bookCatagoryManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bookCatagoryManager</servlet-name>
+        <url-pattern>/bookCatagoryManager</url-pattern>
+    </servlet-mapping>
+
 </web-app>

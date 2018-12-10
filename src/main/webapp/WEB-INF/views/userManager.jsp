@@ -16,12 +16,17 @@
             return;
         }
     %>
-    <link rel="stylesheet" type="text/css" href="resources/jquery-easyui-1.6.10/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/default.css">
-    <link rel="stylesheet" type="text/css" href="resources/jquery-easyui-1.6.10/themes/icon.css">
-    <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/default.css">
+    <link rel="stylesheet" type="text/css"
+          href="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/themes/icon.css">
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/md5.js"></script>
     <%--<script type="text/javascript" src="resources/js/default.js"></script>--%>
     <script type="text/javascript">
@@ -97,10 +102,11 @@
         }
 
         function saveUser() {
+            var write_password = $("#user_password").val();
             $("#fm").form("submit", {
                 url: url,
                 onSubmit: function () {
-                    var write_password = $("#user_password").val();
+                    // var write_password = $("#user_password").val();
                     $("#user_password").val(md5($("#user_password").val()));
                     if ($('#user_sex').combobox("getValue") == "") {
                         $.messager.alert("系统提示", "请选择性别");

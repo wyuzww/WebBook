@@ -2,6 +2,7 @@ package com.ethan.service.impl;
 
 import com.ethan.dao.BookDao;
 import com.ethan.entity.Book;
+import com.ethan.entity.Book_Catagory_Room;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookService;
 
@@ -12,47 +13,32 @@ import java.util.List;
  * Created by zhangwenyu on 2018/12/6.
  */
 public class BookServiceImpl implements BookService {
+    BookDao bookDao = Factory.getBookDaoInstance();
 
-    public List<Book> allBook(int page, int rows) throws SQLException {
-        BookDao bookDao = Factory.getBookDaoInstance();
-        List<Book> books = null;
-        try {
-            books = bookDao.allBook(page, rows);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public List<Book_Catagory_Room> allBook(Book book, int page, int rows) throws SQLException {
+        List<Book_Catagory_Room> books = null;
+        books = bookDao.allBook(book, page, rows);
         return books;
     }
 
     @Override
-    public int addBook(Book book) {
-        BookDao bookDao = Factory.getBookDaoInstance();
+    public int addBook(Book book) throws SQLException {
         int code = 0;
-        try {
-            code = bookDao.addBook(book);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        code = bookDao.addBook(book);
+
         return code;
     }
 
     @Override
     public List<Book> findBook(Book book) throws SQLException {
-        BookDao bookDao = Factory.getBookDaoInstance();
         List<Book> books = null;
-        try {
-            books = bookDao.findBook(book);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        books = bookDao.findBook(book);
         return books;
 
     }
 
     @Override
     public int bookCount(Book book) throws SQLException {
-
-        BookDao bookDao = Factory.getBookDaoInstance();
         int code = 0;
         code = bookDao.bookCount(book);
 
@@ -62,7 +48,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public int update(Book book) throws SQLException {
-        BookDao bookDao = Factory.getBookDaoInstance();
         int code = 0;
         code = bookDao.update(book);
 
@@ -70,10 +55,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int deleteBook(Book book) throws SQLException {
-        BookDao bookDao = Factory.getBookDaoInstance();
+    public int deleteBook(String ids) throws SQLException {
         int code = 0;
-        code = bookDao.deleteBook(book);
+        code = bookDao.deleteBook(ids);
 
         return code;
     }

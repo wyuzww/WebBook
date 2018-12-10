@@ -30,7 +30,6 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        response.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         // 接收客户端信息
 
@@ -217,14 +216,17 @@ public class UserServlet extends HttpServlet {
         }
 
         result = JSON.toJSONString(map);
+        map.clear();
         if (result != null) {
             try {
                 ResponseUtil.write(response, result);
+                result = null;
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
+        return;
 
     }
 

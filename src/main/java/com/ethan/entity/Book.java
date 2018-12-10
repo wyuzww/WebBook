@@ -1,131 +1,135 @@
 package com.ethan.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 /**
  * Created by zhangwenyu on 2018/12/6.
  */
 public class Book {
-    private String ISBN;
-    private int catagoryId;
-    private String name;
-    private String publish;
-    private String author;
-    private Date publishDate;
-    private float price;
-    private Date storageDate;
-    private int stockNumber;
-    private int inNumber;
+    private String book_ISBN;
+    private int book_catagoryId;
+    private String book_name;
+    private String book_publish;
+    private String book_author;
+    @JSONField(format = "yyyy-MM-dd")
+    private Date book_publishDate;
+    private float book_price;
+    @JSONField(format = "yyyy-MM-dd")
+    private Date book_storageDate;
+    private int book_stockNumber;
+    private int book_inNumber;
 
     public Book() {
     }
 
-    public Book(String ISBN, int catagoryId, String name, String publish, String author, Date publishDate, float price, Date storageDate, int stockNumber, int inNumber) {
-        this.ISBN = ISBN;
-        this.catagoryId = catagoryId;
-        this.name = name;
-        this.publish = publish;
-        this.author = author;
-        this.publishDate = publishDate;
-        this.price = price;
-        this.stockNumber = stockNumber;
-        this.storageDate = storageDate;
-        this.inNumber = inNumber;
+    public Book(String book_ISBN, int book_catagoryId, String book_name, String book_publish, String book_author, Date book_publishDate, float book_price, Date book_storageDate, int book_stockNumber, int book_inNumber) {
+        this.book_ISBN = book_ISBN;
+        this.book_catagoryId = book_catagoryId;
+        this.book_name = book_name;
+        this.book_publish = book_publish;
+        this.book_author = book_author;
+        this.book_publishDate = book_publishDate;
+        this.book_price = book_price;
+        this.book_storageDate = book_storageDate;
+        this.book_stockNumber = book_stockNumber;
+        this.book_inNumber = book_inNumber;
     }
 
-    public String getISBN() {
-        return ISBN;
+    public String getBook_ISBN() {
+        return book_ISBN;
     }
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+    public void setBook_ISBN(String book_ISBN) {
+        this.book_ISBN = book_ISBN;
     }
 
-    public int getCatagoryId() {
-        return catagoryId;
+    public int getBook_catagoryId() {
+        return book_catagoryId;
     }
 
-    public void setCatagoryId(int catagoryId) {
-        this.catagoryId = catagoryId;
+    public void setBook_catagoryId(int book_catagoryId) {
+        this.book_catagoryId = book_catagoryId;
     }
 
-    public String getName() {
-        return name;
+    public String getBook_name() {
+        return book_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBook_name(String book_name) {
+        this.book_name = book_name;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getBook_publish() {
+        return book_publish;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setBook_publish(String book_publish) {
+        this.book_publish = book_publish;
     }
 
-    public String getPublish() {
-        return publish;
+    public String getBook_author() {
+        return book_author;
     }
 
-    public void setPublish(String publish) {
-        this.publish = publish;
+    public void setBook_author(String book_author) {
+        this.book_author = book_author;
     }
 
-    public Date getPublishDate() {
-        return publishDate;
+    public Date getBook_publishDate() {
+        return book_publishDate;
     }
 
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
+    public void setBook_publishDate(Date book_publishDate) {
+        this.book_publishDate = book_publishDate;
     }
 
-    public float getPrice() {
-        return price;
+    public float getBook_price() {
+        return book_price;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setBook_price(float book_price) {
+        this.book_price = book_price;
     }
 
-    public Date getStorageDate() {
-        return storageDate;
+    public Date getBook_storageDate() {
+        return book_storageDate;
     }
 
-    public void setStorageDate(Date storageDate) {
-        this.storageDate = storageDate;
+    public void setBook_storageDate(Date book_storageDate) {
+        this.book_storageDate = book_storageDate;
     }
 
-    public int getStockNumber() {
-        return stockNumber;
+    public int getBook_stockNumber() {
+        return book_stockNumber;
     }
 
-    public void setStockNumber(int stockNumber) {
-        this.stockNumber = stockNumber;
+    public void setBook_stockNumber(int book_stockNumber) {
+        this.book_stockNumber = book_stockNumber;
     }
 
-    public int getInNumber() {
-        return inNumber;
+    public int getBook_inNumber() {
+        return book_inNumber;
     }
 
-    public void setInNumber(int inNumber) {
-        this.inNumber = inNumber;
+    public void setBook_inNumber(int book_inNumber) {
+        this.book_inNumber = book_inNumber;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "ISBN='" + ISBN + '\'' +
-                ", catagoryId=" + catagoryId +
-                ", name='" + name + '\'' +
-                ", publish='" + publish + '\'' +
-                ", author='" + author + '\'' +
-                ", publishData='" + publishDate + '\'' +
-                ", price=" + price +
-                ", storageData='" + storageDate + '\'' +
-                ", stockNumber=" + stockNumber +
-                ", inNumber=" + inNumber +
+                "book_ISBN='" + book_ISBN + '\'' +
+                ", book_catagoryId=" + book_catagoryId +
+                ", book_name='" + book_name + '\'' +
+                ", book_publish='" + book_publish + '\'' +
+                ", book_author='" + book_author + '\'' +
+                ", book_publishDate=" + book_publishDate +
+                ", book_price=" + book_price +
+                ", book_storageDate=" + book_storageDate +
+                ", book_stockNumber=" + book_stockNumber +
+                ", book_inNumber=" + book_inNumber +
                 '}';
     }
 }

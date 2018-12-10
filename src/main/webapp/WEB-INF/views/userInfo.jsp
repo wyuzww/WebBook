@@ -17,12 +17,17 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<link rel="stylesheet" type="text/css" href="resources/jquery-easyui-1.6.10/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="resources/css/default.css">
-<link rel="stylesheet" type="text/css" href="resources/jquery-easyui-1.6.10/themes/icon.css">
-<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.min.js"></script>
-<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
+<link rel="stylesheet" type="text/css"
+      href="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/default.css">
+<link rel="stylesheet" type="text/css"
+      href="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/themes/icon.css">
+<script type="text/javascript"
+        src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/jquery.min.js"></script>
+<script type="text/javascript"
+        src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
+<script type="text/javascript"
+        src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
 <html>
 <script type="text/javascript">
 
@@ -31,7 +36,7 @@
     <title>个人信息</title>
 </head>
 <body>
-<div id="p" class="easyui-panel" title="个人信息" style="padding:10px;">
+<div id="p" class="easyui-panel" title="个人信息" style="width:1200px;padding:10px;fit:true">
     <table border="1" align="center" style="width:100%">
         <tr>
             <td align="right">帐号：</td>

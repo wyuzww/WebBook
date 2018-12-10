@@ -1,13 +1,11 @@
 package com.ethan.factory;
 
-import com.ethan.dao.BookDao;
-import com.ethan.dao.UserDao;
-import com.ethan.dao.impl.BookDaoImpl;
-import com.ethan.dao.impl.UserDaoImpl;
+import com.ethan.dao.*;
+import com.ethan.dao.impl.*;
 import com.ethan.dbc.C3P0Util;
-import com.ethan.entity.User;
-import com.ethan.service.impl.BookServiceImpl;
-import com.ethan.service.impl.UserServiceImpl;
+import com.ethan.entity.*;
+import com.ethan.service.BookCatagoryService;
+import com.ethan.service.impl.*;
 import org.apache.commons.dbutils.QueryRunner;
 
 public class Factory {
@@ -19,6 +17,14 @@ public class Factory {
         return new QueryRunner(C3P0Util.getDataSource());
     }
 
+    /**
+     * 获取一个User实例
+     *
+     * @return user
+     */
+    public static User getUser() {
+        return new User();
+    }
     /**
      * 获取一个UserDaoImpl实例
      * @return UserDaoImpl
@@ -44,7 +50,6 @@ public class Factory {
     public static BookDao getBookDaoInstance() {
         return new BookDaoImpl();
     }
-
     /**
      * 获取一个BookServiceImpl实例
      *
@@ -54,13 +59,33 @@ public class Factory {
         return new BookServiceImpl();
     }
 
-    /**
-     * 获取一个User实例
-     *
-     * @return user
-     */
-    public static User getUser() {
-        return new User();
+    public static Book getBook() {
+        return new Book();
     }
 
+
+    public static BookRoom getBookRoomInstance() {
+        return new BookRoom();
+    }
+
+    public static BookRoomDao getBookRoomDaoInstance() {
+        return new BookRoomDaoImpl();
+    }
+
+    public static BookRoomServiceImpl getBookRoomServiceInstance() {
+        return new BookRoomServiceImpl();
+    }
+
+
+    public static BookCatagory getBookCatagoryInstance() {
+        return new BookCatagory();
+    }
+
+    public static BookCatagoryDao getBookCatagoryDaoInstance() {
+        return new BookCatagoryDaoImpl();
+    }
+
+    public static BookCatagoryService getBookCatagoryServiceInstance() {
+        return new BookCatagoryServiceImpl();
+    }
 }
