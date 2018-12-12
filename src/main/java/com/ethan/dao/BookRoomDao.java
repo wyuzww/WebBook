@@ -1,7 +1,6 @@
 package com.ethan.dao;
 
 import com.ethan.entity.BookRoom;
-
 import java.sql.SQLException;
 import java.util.List;
 

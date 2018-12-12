@@ -5,14 +5,14 @@ package com.ethan.entity;
  */
 public class BorrowCard {
     private String borrowcard_id;
-    private String borrowcard_rid;
+    private int borrowcard_rid;
     private int borrowcard_quantity;
-    private int borrowcard_blid;
+    private int borrowcard_blid = -1;
 
     public BorrowCard() {
     }
 
-    public BorrowCard(String borrowcard_id, String borrowcard_rid, int borrowcard_quantity, int borrowcard_blid) {
+    public BorrowCard(String borrowcard_id, int borrowcard_rid, int borrowcard_quantity, int borrowcard_blid) {
         this.borrowcard_id = borrowcard_id;
         this.borrowcard_rid = borrowcard_rid;
         this.borrowcard_quantity = borrowcard_quantity;
@@ -27,11 +27,11 @@ public class BorrowCard {
         this.borrowcard_id = borrowcard_id;
     }
 
-    public String getBorrowcard_rid() {
+    public int getBorrowcard_rid() {
         return borrowcard_rid;
     }
 
-    public void setBorrowcard_rid(String borrowcard_rid) {
+    public void setBorrowcard_rid(int borrowcard_rid) {
         this.borrowcard_rid = borrowcard_rid;
     }
 
@@ -56,7 +56,7 @@ public class BorrowCard {
     public String toString() {
         return "BorrowCard{" +
                 "borrowcard_id='" + borrowcard_id + '\'' +
-                ", borrowcard_rid='" + borrowcard_rid + '\'' +
+                ", borrowcard_rid=" + borrowcard_rid +
                 ", borrowcard_quantity=" + borrowcard_quantity +
                 ", borrowcard_blid=" + borrowcard_blid +
                 '}';

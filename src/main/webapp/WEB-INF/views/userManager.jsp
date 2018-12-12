@@ -188,7 +188,7 @@
     </script>
 </head>
 <body>
-<table id="dg" title="帐号信息" class="easyui-datagrid" fitColumns="true"
+<table id="dg" title="管理帐号信息" class="easyui-datagrid" fitColumns="true"
        pagination="true" rownumbers="true" url="user?flagText=allUser" fit="true" toolbar="#tb" .>
     <thead>
     <tr>
@@ -204,7 +204,7 @@
     </thead>
 </table>
 
-<div id="tb">
+<div id="tb" align="center">
     <div>
         <a href="javascript:openAddUserDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
         <a href="javascript:openUpdateUserDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>

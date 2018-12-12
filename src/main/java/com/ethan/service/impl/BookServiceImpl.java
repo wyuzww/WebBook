@@ -1,8 +1,8 @@
 package com.ethan.service.impl;
 
 import com.ethan.dao.BookDao;
+import com.ethan.entity.AllEntity;
 import com.ethan.entity.Book;
-import com.ethan.entity.Book_Catagory_Room;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookService;
 
@@ -15,8 +15,8 @@ import java.util.List;
 public class BookServiceImpl implements BookService {
     BookDao bookDao = Factory.getBookDaoInstance();
 
-    public List<Book_Catagory_Room> allBook(Book book, int page, int rows) throws SQLException {
-        List<Book_Catagory_Room> books = null;
+    public List<AllEntity> allBook(Book book, int page, int rows) throws SQLException {
+        List<AllEntity> books = null;
         books = bookDao.allBook(book, page, rows);
         return books;
     }

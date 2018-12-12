@@ -2,7 +2,7 @@ package com.ethan.dao.impl;
 
 import com.ethan.dao.BookDao;
 import com.ethan.entity.Book;
-import com.ethan.entity.Book_Catagory_Room;
+import com.ethan.entity.AllEntity;
 import com.ethan.utils.StringUtil;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
@@ -16,7 +16,7 @@ import java.util.List;
 public class BookDaoImpl extends BaseDao implements BookDao {
 
     @Override
-    public List<Book_Catagory_Room> allBook(Book book, int page, int rows) throws SQLException {
+    public List<AllEntity> allBook(Book book, int page, int rows) throws SQLException {
         String sql = "select * from book,bookcatagory,bookroom where book.book_catagoryId = bookcatagory.bookcatagory_id AND bookcatagory.bookcatagory_brid = bookroom.bookroom_id";
         if (StringUtil.isNotEmpty(book.getBook_ISBN())) {
             sql += " and book.book_ISBN like '%" + book.getBook_ISBN() + "%'";
@@ -34,7 +34,7 @@ public class BookDaoImpl extends BaseDao implements BookDao {
             sql += " limit " + (page - 1) * rows + "," + rows;
         }
 
-        List<Book_Catagory_Room> books = queryRunner.query(sql, new BeanListHandler<Book_Catagory_Room>(Book_Catagory_Room.class));
+        List<AllEntity> books = queryRunner.query(sql, new BeanListHandler<AllEntity>(AllEntity.class));
         return books;
     }
 

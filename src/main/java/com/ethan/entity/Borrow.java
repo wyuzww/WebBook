@@ -1,5 +1,7 @@
 package com.ethan.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 /**
@@ -9,8 +11,11 @@ public class Borrow {
     private int borrow_id;
     private String borrow_bcid;
     private String borrow_ISBN;
+    @JSONField(format = "yyyy-MM-dd")
     private Date borrow_borrowDate;
+    @JSONField(format = "yyyy-MM-dd")
     private Date borrow_expireDate;
+    @JSONField(format = "yyyy-MM-dd")
     private Date borrow_dueDate;
 
 

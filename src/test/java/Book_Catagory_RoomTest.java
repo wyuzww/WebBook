@@ -1,5 +1,5 @@
 import com.alibaba.fastjson.JSON;
-import com.ethan.entity.Book_Catagory_Room;
+import com.ethan.entity.AllEntity;
 import com.ethan.factory.Factory;
 
 import java.sql.SQLException;
@@ -11,8 +11,8 @@ import java.util.List;
 public class Book_Catagory_RoomTest {
     public static void main(String[] args) {
 
-        List<Book_Catagory_Room> book_catagory_room = null;
-        Book_Catagory_Room book_catagory_room1 = new Book_Catagory_Room();
+        List<AllEntity> book_catagory_room = null;
+        AllEntity book_catagory_room1 = new AllEntity();
 //        book_catagory_room1.setBook_ISBN("1");
 //        book_catagory_room1.setBook_catagoryId(1);
 //        book_catagory_room1.setBook_name("");

@@ -85,4 +85,31 @@
         <url-pattern>/bookCatagoryManager</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>borrowCardManager</servlet-name>
+        <jsp-file>/WEB-INF/views/borrowCardManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowCardManager</servlet-name>
+        <url-pattern>/borrowCardManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>borrowLevelManager</servlet-name>
+        <jsp-file>/WEB-INF/views/borrowLevelManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowLevelManager</servlet-name>
+        <url-pattern>/borrowLevelManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ticketManager</servlet-name>
+        <jsp-file>/WEB-INF/views/ticketManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ticketManager</servlet-name>
+        <url-pattern>/ticketManager</url-pattern>
+    </servlet-mapping>
+
 </web-app>

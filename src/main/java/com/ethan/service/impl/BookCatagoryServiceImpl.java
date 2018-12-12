@@ -1,13 +1,10 @@
 package com.ethan.service.impl;
 
 import com.ethan.dao.BookCatagoryDao;
-import com.ethan.dao.BookRoomDao;
+import com.ethan.entity.AllEntity;
 import com.ethan.entity.BookCatagory;
-import com.ethan.entity.BookRoom;
-import com.ethan.entity.Book_Catagory_Room;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookCatagoryService;
-import com.ethan.service.BookRoomService;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -20,8 +17,8 @@ public class BookCatagoryServiceImpl implements BookCatagoryService {
 
 
     @Override
-    public List<Book_Catagory_Room> allCatagory(BookCatagory bookCatagory, int page, int rows) throws SQLException {
-        List<Book_Catagory_Room> acr = null;
+    public List<AllEntity> allCatagory(BookCatagory bookCatagory, int page, int rows) throws SQLException {
+        List<AllEntity> acr = null;
         acr = bookCatagoryDao.allCatagory(bookCatagory, page, rows);
 
         return acr;

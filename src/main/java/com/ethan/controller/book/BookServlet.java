@@ -2,7 +2,7 @@ package com.ethan.controller.book;
 
 import com.alibaba.fastjson.JSON;
 import com.ethan.entity.Book;
-import com.ethan.entity.Book_Catagory_Room;
+import com.ethan.entity.AllEntity;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookService;
 import com.ethan.utils.DateUtil;
@@ -57,7 +57,7 @@ public class BookServlet extends HttpServlet {
 
 //            System.out.println(book_catagory_room.toString());
 
-            List<Book_Catagory_Room> book_catagory_rooms = null;
+            List<AllEntity> book_catagory_rooms = null;
             int total = 0;
 
 

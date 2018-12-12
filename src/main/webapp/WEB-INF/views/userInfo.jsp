@@ -37,7 +37,7 @@
 </head>
 <body>
 <div id="p" class="easyui-panel" title="个人信息" style="width:1200px;padding:10px;fit:true">
-    <table border="1" align="center" style="width:100%">
+    <table border="0" align="center" style="width:100%">
         <tr>
             <td align="right">帐号：</td>
             <td align="left"><label>3116004259</label></td>
@@ -47,14 +47,14 @@
             <td align="left"><label>男</label></td>
 
         </tr>
-        <%--<tr>--%>
-        <%--<td  align="right">电话：</td>--%>
-        <%--<td><label>13612250853</label></td>--%>
-        <%--<td align="right"></td>--%>
-        <%--<td ><label></label></td>--%>
-        <%--<td align="right">权限：</td>--%>
-        <%--<td align="left"><label >超级管理员</label></td>--%>
-        <%--</tr>--%>
+        <tr>
+            <td align="right">电话：</td>
+            <td><label>13612250853</label></td>
+            <td align="right"></td>
+            <td><label></label></td>
+            <td align="right">权限：</td>
+            <td align="left"><label>超级管理员</label></td>
+        </tr>
     </table>
 </div>
 

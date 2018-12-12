@@ -1,8 +1,8 @@
 package com.ethan.controller.book;
 
 import com.alibaba.fastjson.JSON;
+import com.ethan.entity.AllEntity;
 import com.ethan.entity.BookCatagory;
-import com.ethan.entity.Book_Catagory_Room;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookCatagoryService;
 import com.ethan.utils.ResponseUtil;
@@ -46,7 +46,7 @@ public class BookCatagoryServlet extends HttpServlet {
 
 //            System.out.println(book_catagory_room.toString());
 
-            List<Book_Catagory_Room> book_catagory_rooms = null;
+            List<AllEntity> book_catagory_rooms = null;
             int total = 0;
 
             try {
@@ -134,7 +134,7 @@ public class BookCatagoryServlet extends HttpServlet {
 
         } else if (flagText != null && flagText.equals("allBookCatagoryList")) {
 
-            List<Book_Catagory_Room> bookCatagories = null;
+            List<AllEntity> bookCatagories = null;
             int total = 0;
 
             try {
@@ -143,7 +143,7 @@ public class BookCatagoryServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            Book_Catagory_Room book_catagory_room = new Book_Catagory_Room();
+            AllEntity book_catagory_room = new AllEntity();
             book_catagory_room.setBookcatagory_id(-1);
             book_catagory_room.setBookcatagory_name("");
 

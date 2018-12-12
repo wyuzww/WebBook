@@ -4,6 +4,7 @@ import com.ethan.entity.User;
 import com.ethan.factory.Factory;
 import com.ethan.service.UserService;
 import com.ethan.service.impl.UserServiceImpl;
+import com.ethan.utils.StringUtil;
 
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -23,24 +24,37 @@ public class UserTest {
 //        userResult = userService.login(user);
 //        System.out.println(userResult);
 //        String account = "d";
-        String name = "2";
+//        String name = "2";
 //
 //        user.setAccount(account);
-        user.setUser_name(name);
+//        user.setUser_name(name);
+//
+//        List<User> users = null;
+//        try {
+//            users = userService.allUser(user, 1, 10);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+////            System.out.println(users.toString());
+//        int total = 10;
+//        Map<String, Object> map = new HashMap<String, Object>();
+//        map.put("rows", users);
+//        map.put("total", total);
+//
+//        String jsonString = JSON.toJSONString(map);
+//        System.out.println(jsonString.toString());
 
-        List<User> users = null;
-        try {
-            users = userService.allUser(user, 1, 10);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        int n = 10;
+        while (n-- > 0) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(StringUtil.getBorrowCardId(10));
         }
-//            System.out.println(users.toString());
-        int total = 10;
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("rows", users);
-        map.put("total", total);
 
-        String jsonString = JSON.toJSONString(map);
-        System.out.println(jsonString.toString());
+
+
     }
 }

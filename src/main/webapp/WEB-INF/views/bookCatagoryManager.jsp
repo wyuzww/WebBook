@@ -126,7 +126,7 @@
     </script>
 </head>
 <body>
-<table id="dg" title="类别信息" class="easyui-datagrid" fitColumns="true"
+<table id="dg" title="管理图书类别" class="easyui-datagrid" fitColumns="true"
        pagination="true" url="bookcatagory?flagText=allBookCatagory" fit="true" toolbar="#tb" .>
     <thead>
     <tr>
@@ -140,7 +140,7 @@
     </thead>
 </table>
 
-<div id="tb">
+<div id="tb" align="center">
     <div>
         <a href="javascript:openAddBookCatagoryDialog()" class="easyui-linkbutton" iconCls="icon-add"
            plain="true">添加</a>

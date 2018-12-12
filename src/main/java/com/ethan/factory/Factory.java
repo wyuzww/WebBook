@@ -4,7 +4,7 @@ import com.ethan.dao.*;
 import com.ethan.dao.impl.*;
 import com.ethan.dbc.C3P0Util;
 import com.ethan.entity.*;
-import com.ethan.service.BookCatagoryService;
+import com.ethan.service.*;
 import com.ethan.service.impl.*;
 import org.apache.commons.dbutils.QueryRunner;
 
@@ -87,5 +87,57 @@ public class Factory {
 
     public static BookCatagoryService getBookCatagoryServiceInstance() {
         return new BookCatagoryServiceImpl();
+    }
+
+
+    public static BorrowCard getBorrowCardInstance() {
+        return new BorrowCard();
+    }
+
+    public static BorrowCardDao getBorrowCardDaoInstance() {
+        return new BorrowCardDaoImpl();
+    }
+
+    public static BorrowCardService getBorrowCardServiceInstance() {
+        return new BorrowCardServiceImpl();
+    }
+
+
+    public static BorrowLevel getBorrowLevelInstance() {
+        return new BorrowLevel();
+    }
+
+    public static BorrowLevelDao getBorrowLevelDaoInstance() {
+        return new BorrowLevelDaoImpl();
+    }
+
+    public static BorrowLevelService getBorrowLevelServiceInstance() {
+        return new BorrowLevelServiceImpl();
+    }
+
+
+    public static Borrow getBorrowInstance() {
+        return new Borrow();
+    }
+
+    public static BorrowDao getBorrowDaoInstance() {
+        return new BorrowDaoImpl();
+    }
+
+    public static BorrowService getBorrowServiceInstance() {
+        return new BorrowServiceImpl();
+    }
+
+
+    public static Ticket getTicketInstance() {
+        return new Ticket();
+    }
+
+    public static TicketDao getTicketDaoInstance() {
+        return new TicketDaoImpl();
+    }
+
+    public static TicketService getTicketServiceInstance() {
+        return new TicketServiceImpl();
     }
 }

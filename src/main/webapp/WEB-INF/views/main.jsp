@@ -45,15 +45,19 @@
 </script>
 </head>
 <body class="easyui-layout">
-<div region="north" style="height: 85px;background-color: #E0EDFF">
+<div region="north"
+     style="height: 90px;background-image: url(${pageContext.request.contextPath}/resources/images/main.png);background-repeat: no-repeat;width: 100%;background-color: #bfc6d8 ">
 
-    <div style=" float: right;padding-top: 55px;padding-right: 10px;">
+    <%--<div align="left" style="height: 100%"><img src="resources/images/main.png">-color: #E0EDFF</div>--%>
+    <div style=" float: right;padding-top: 65px;padding-right: 15px;">
+        <%--<img src="resources/images/main.png">--%>
+        <%--<div align="left" style="height: 100%;float: left"><img src="resources/images/main.png"></div>--%>
         <font color="red">${currentUser.user_name }</font>
         ,欢迎您！
         <a href="javascript:(0)" style="background-color: white" onclick="exit()"><font color="#0E2D5F">注销</font></a>
         <%--<a href="javascript:(0)" class="easyui-linkbutton" iconCls="icon-no" style="height:20px"  >注销</a>--%>
     </div>
-    <div align="left" style="height: 100%"><img src="resources/images/main1.jpg"></div>
+
 </div>
 <div data-options="region: 'center'" >
     <div class="easyui-tabs" fit="true" border="false" id="tabs">

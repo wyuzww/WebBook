@@ -8,11 +8,11 @@ var _menus = {
             "menuname": "帐号管理",
             "url": "userManager"
             },
-            {
-                "menuid": "12",
-                "menuname": "个人信息",
-                "url": "userInfo"
-            }
+            // {
+            //     "menuid": "12",
+            //     "menuname": "个人信息",
+            //     "url": "userInfo"
+            // }
         ]
     }, {
         "menuid": "2",
@@ -22,15 +22,16 @@ var _menus = {
             "menuname": "管理图书",
             "url": "bookManager"
             },
+
             {
                 "menuid": "22",
-                "menuname": "管理书库",
-                "url": "bookRoomManager"
+                "menuname": "管理图书类别",
+                "url": "bookCatagoryManager"
             },
             {
                 "menuid": "23",
-                "menuname": "管理图书类别",
-                "url": "bookCatagoryManager"
+                "menuname": "管理图书书库",
+                "url": "bookRoomManager"
             }
         ]
     }, {
@@ -39,12 +40,17 @@ var _menus = {
         "menus": [{
             "menuid": "31",
             "menuname": "借阅证管理",
-            "url": "bookManager"
+            "url": "borrowCardManager"
             },
             {
                 "menuid": "32",
+                "menuname": "借阅等级查看",
+                "url": "borrowLevelManager"
+            },
+            {
+                "menuid": "33",
                 "menuname": "罚款管理",
-                "url": "bookManager"
+                "url": "ticketManager"
             }
         ]
     }, {

@@ -1,5 +1,7 @@
 package com.ethan.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 /**
@@ -10,6 +12,7 @@ public class Ticket {
     private String ticket_bcid;
     private String ticket_ISBN;
     private float ticket_fineMoney;
+    @JSONField(format = "yyyy-MM-dd")
     private Date ticket_fineDate;
 
     public Ticket() {

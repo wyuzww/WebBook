@@ -2,7 +2,6 @@ package com.ethan.controller.book;
 
 import com.alibaba.fastjson.JSON;
 import com.ethan.entity.BookRoom;
-import com.ethan.entity.Book_Catagory_Room;
 import com.ethan.factory.Factory;
 import com.ethan.service.BookRoomService;
 import com.ethan.service.BookService;

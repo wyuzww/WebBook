@@ -82,6 +82,9 @@
             $("#fm").form("submit", {
                 url: url,
                 onSubmit: function () {
+                    // alert($('#book_publishDate').datebox("getValue"));
+                    // alert(new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+(new Date().getDate()));
+
 
                     if ($('#book_catagoryId').combobox("getValue") == -1) {
                         $.messager.alert("系统提示", "请选择类别");
@@ -93,8 +96,13 @@
                         return false;
                     }
 
-                    if ($('#book_publishDate').datebox("getValue") < $('#book_storageDate').datebox("getValue")) {
+                    if ($('#book_publishDate').datebox("getValue") > $('#book_storageDate').datebox("getValue")) {
                         $.messager.alert("系统提示", "入库日期不能早于出版日期");
+                        return false;
+                    }
+
+                    if ($('#book_publishDate').datebox("getValue").toString() > (new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + (new Date().getDate())) || $('#book_storageDate').datebox("getValue").toString() > (new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + (new Date().getDate()))) {
+                        $.messager.alert("系统提示", "不能使用未来日期");
                         return false;
                     }
 
@@ -151,7 +159,7 @@
     </script>
 </head>
 <body>
-<table id="dg" title="图书信息" class="easyui-datagrid" fitColumns="true"
+<table id="dg" title="管理图书信息" class="easyui-datagrid" fitColumns="true"
        pagination="true" url="book?flagText=allBook" fit="true" toolbar="#tb" .>
     <thead>
     <tr>
@@ -172,7 +180,7 @@
     </thead>
 </table>
 
-<div id="tb">
+<div id="tb" align="center">
     <div>
         <a href="javascript:openAddBookDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
         <a href="javascript:openUpdateBookDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>

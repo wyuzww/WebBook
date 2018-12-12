@@ -61,6 +61,15 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             code = queryRunner.update(sql, user.getUser_account(), user.getUser_password(), user.getUser_name(), user.getUser_sex(), user.getUser_phone(), user.getUser_photo());
         }
 
+        if (code > 0) {
+
+            String sql1 = "select * from user order by user_id DESC limit 1 ";
+            User userResult = queryRunner.query(sql1, new BeanHandler<User>(User.class));
+            String sql2 = "insert into borrowcard (borrowcard_id,borrowcard_rid,borrowcard_quantity,borrowcard_blid) values(?,?,0,1) ";
+            queryRunner.update(sql2, StringUtil.getBorrowCardId(userResult.getUser_id()), userResult.getUser_id());
+
+        }
+
 
         return code;
     }

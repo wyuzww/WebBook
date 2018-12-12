@@ -122,7 +122,7 @@
     </script>
 </head>
 <body>
-<table id="dg" title="书库信息" class="easyui-datagrid" fitColumns="true"
+<table id="dg" title="管理书库信息" class="easyui-datagrid" fitColumns="true"
        pagination="true" url="bookroom?flagText=allBookRoom" fit="true" toolbar="#tb" .>
     <thead>
     <tr>
@@ -135,7 +135,7 @@
     </thead>
 </table>
 
-<div id="tb">
+<div id="tb" align="center">
     <div>
         <a href="javascript:openAddBookRoomDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
         <a href="javascript:openUpdateBookRoomDialog()" class="easyui-linkbutton" iconCls="icon-edit"

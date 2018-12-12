@@ -22,7 +22,7 @@
 
     </script>
 </head>
-<body background="resources/images/login2.jpg" style="background-size: 100%;background-repeat: no-repeat">
+<body background="resources/images/login.jpg" style="background-size: 100%;background-repeat: no-repeat">
 <div align="center" style="padding-top: 50px;" >
     <form action="user" method="post" >
         <input type="hidden" name="flagText" value="login">

@@ -1,8 +1,7 @@
 package com.ethan.dao;
 
 import com.ethan.entity.BookCatagory;
-import com.ethan.entity.BookRoom;
-import com.ethan.entity.Book_Catagory_Room;
+import com.ethan.entity.AllEntity;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -19,7 +18,7 @@ public interface BookCatagoryDao {
      * @return
      * @throws SQLException
      */
-    public List<Book_Catagory_Room> allCatagory(BookCatagory bookCatagory, int page, int rows) throws SQLException;
+    public List<AllEntity> allCatagory(BookCatagory bookCatagory, int page, int rows) throws SQLException;
 
     /**
      * updateBC 更新BookCatagory
