@@ -49,4 +49,11 @@ public class BorrowCardServiceImpl implements BorrowCardService {
         code = borrowCardDao.borrowbBook(borrowCard, a);
         return code;
     }
+
+    @Override
+    public int bcCount() throws SQLException {
+        int code = 0;
+        code = borrowCardDao.bcCount();
+        return code;
+    }
 }

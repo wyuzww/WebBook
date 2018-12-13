@@ -35,6 +35,7 @@
             src="${pageContext.request.contextPath}/resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/default.js"></script>
 <script type="text/javascript">
+    setInterval("time.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
     function exit() {
         $.messager.confirm("系统提示", "您确认要注销登录吗？", function (r) {
             if (r) {
@@ -49,13 +50,18 @@
      style="height: 90px;background-image: url(${pageContext.request.contextPath}/resources/images/main.png);background-repeat: no-repeat;width: 100%;background-color: #bfc6d8 ">
 
     <%--<div align="left" style="height: 100%"><img src="resources/images/main.png">-color: #E0EDFF</div>--%>
-    <div style=" float: right;padding-top: 65px;padding-right: 15px;">
-        <%--<img src="resources/images/main.png">--%>
-        <%--<div align="left" style="height: 100%;float: left"><img src="resources/images/main.png"></div>--%>
-        <font color="red">${currentUser.user_name }</font>
-        ,欢迎您！
-        <a href="javascript:(0)" style="background-color: white" onclick="exit()"><font color="#0E2D5F">注销</font></a>
-        <%--<a href="javascript:(0)" class="easyui-linkbutton" iconCls="icon-no" style="height:20px"  >注销</a>--%>
+    <div style=" float: right;padding-right: 20px;">
+        <div>当前时间：<span style="color: blue" id="time"></span></div>
+        <%--<div id="time">当前时间：</div>--%>
+        <p>
+
+        </p>
+        <div style="padding-top: 30px" align="right">
+            <font color="red">${currentUser.user_name }</font>
+            ,欢迎您！
+            <a href="javascript:(0)" style="background-color: white" onclick="exit()"><font
+                    color="#0E2D5F">注销</font></a>
+        </div>
     </div>
 
 </div>

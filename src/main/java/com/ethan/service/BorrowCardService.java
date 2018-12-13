@@ -43,4 +43,6 @@ public interface BorrowCardService {
     public int addBC(BorrowCard borrowCard) throws SQLException;
 
     public int borrowbBook(BorrowCard borrowCard, int a) throws SQLException;
+
+    public int bcCount() throws SQLException;
 }

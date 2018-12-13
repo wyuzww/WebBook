@@ -77,11 +77,11 @@ public class TicketServlet extends HttpServlet {
 
             if (delNums > 0) {
                 map.put("success", "true");
-                map.put("msg", "删除成功！");
+                map.put("msg", "缴费成功！");
                 map.put("delNums", delNums);
             } else {
                 map.put("success", "false");
-                map.put("msg", "删除失败，请重试！");
+                map.put("msg", "缴费失败，请重试！");
             }
 
         } else {

@@ -5,6 +5,7 @@ import com.ethan.entity.AllEntity;
 import com.ethan.entity.BorrowCard;
 import com.ethan.utils.StringUtil;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -64,5 +65,14 @@ public class BorrowCardDaoImpl extends BaseDao implements BorrowCardDao {
         }
 
         return code;
+    }
+
+    @Override
+    public int bcCount() throws SQLException {
+
+        String sql = "select count(*) from borrowcard";
+        long count = queryRunner.query(sql, new ScalarHandler<Long>());
+
+        return (int) count;
     }
 }

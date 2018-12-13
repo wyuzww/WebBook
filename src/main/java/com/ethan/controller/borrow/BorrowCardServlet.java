@@ -59,7 +59,7 @@ public class BorrowCardServlet extends HttpServlet {
 
             try {
                 borrowCards = borrowCardService.allBorrowCard(borrowCard, Integer.parseInt(page), Integer.parseInt(rows));
-                total = borrowCards.size();
+                total = borrowCardService.bcCount();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

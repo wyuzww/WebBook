@@ -34,7 +34,7 @@
         function deleteTicket() {
             var selectedRows = $("#dg").datagrid('getSelections');
             if (selectedRows.length == 0) {
-                $.messager.alert("系统提示", "请选择要删除的数据！");
+                $.messager.alert("系统提示", "请选择要缴费的记录！");
                 return;
             }
 
@@ -43,7 +43,7 @@
                 strIds.push(selectedRows[i].ticket_id);
             }
             var ids = strIds.join(",");
-            $.messager.confirm("系统提示", "您确认要删掉这<font color=red>" + selectedRows.length + "</font>条数据吗？", function (r) {
+            $.messager.confirm("系统提示", "是否确认缴费？", function (r) {
                 if (r) {
                     $.post("ticket", {delIds: ids, flagText: "delete"}, function (result) {
                         // var json = $.parseJSON(result);
@@ -83,7 +83,7 @@
 
 <div id="tb" align="center">
     <div>
-        <a href="javascript:deleteTicket()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">已缴费（delete）</a>
+        <a href="javascript:deleteTicket()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">缴费（delete）</a>
     </div>
     <div>
         &nbsp;借阅证编号：&nbsp;<input type="text" name="f_ticket_bcid" id="f_ticket_bcid" size="20"/>
