@@ -24,6 +24,7 @@ public class BookRoomDaoImpl extends BaseDao implements BookRoomDao {
         if (page > 0 && rows > 0) {
             sql += " limit " + (page - 1) * rows + "," + rows;
         }
+
         List<BookRoom> bookrooms = queryRunner.query(sql, new BeanListHandler<BookRoom>(BookRoom.class));
         return bookrooms;
 

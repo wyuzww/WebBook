@@ -42,4 +42,11 @@ public class BorrowCardServiceImpl implements BorrowCardService {
         code = borrowCardDao.addBC(borrowCard);
         return code;
     }
+
+    @Override
+    public int borrowbBook(BorrowCard borrowCard, int a) throws SQLException {
+        int code = 0;
+        code = borrowCardDao.borrowbBook(borrowCard, a);
+        return code;
+    }
 }

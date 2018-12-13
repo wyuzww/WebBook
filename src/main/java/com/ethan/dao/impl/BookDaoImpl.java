@@ -85,5 +85,19 @@ public class BookDaoImpl extends BaseDao implements BookDao {
         return code;
     }
 
+    @Override
+    public int borrowbBook(Book book, int a) throws SQLException {
+        int code = 0;
+        if (a == 0) {//还书
+
+            String sql = "update book set book_inNumber=book_inNumber+1 where book_ISBN=?";
+            code = queryRunner.update(sql, book.getBook_ISBN());
+        } else {
+            String sql = "update book set book_inNumber=book_inNumber-1 where book_ISBN=?";
+            code = queryRunner.update(sql, book.getBook_ISBN());
+        }
+        return code;
+    }
+
 
 }

@@ -17,7 +17,7 @@ public class BookRoomServiceImpl implements BookRoomService {
     @Override
     public List<BookRoom> allBookRoom(BookRoom bookRoom, int page, int rows) throws SQLException {
         List<BookRoom> bookRooms = null;
-        bookRooms = bookRoomDao.allBookRoom(bookRoom, 1, 3);
+        bookRooms = bookRoomDao.allBookRoom(bookRoom, page, rows);
 
         return bookRooms;
     }

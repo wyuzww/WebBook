@@ -112,4 +112,31 @@
         <url-pattern>/ticketManager</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>borrowManager</servlet-name>
+        <jsp-file>/WEB-INF/views/borrowManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowManager</servlet-name>
+        <url-pattern>/borrowManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>borrowBookManager</servlet-name>
+        <jsp-file>/WEB-INF/views/borrowBookManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>borrowBookManager</servlet-name>
+        <url-pattern>/borrowBookManager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dueBookManager</servlet-name>
+        <jsp-file>/WEB-INF/views/dueBookManager.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dueBookManager</servlet-name>
+        <url-pattern>/dueBookManager</url-pattern>
+    </servlet-mapping>
+
 </web-app>

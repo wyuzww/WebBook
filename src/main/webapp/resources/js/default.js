@@ -51,6 +51,11 @@ var _menus = {
                 "menuid": "33",
                 "menuname": "罚款管理",
                 "url": "ticketManager"
+            },
+            {
+                "menuid": "34",
+                "menuname": "借书记录查看",
+                "url": "borrowManager"
             }
         ]
     }, {
@@ -59,12 +64,12 @@ var _menus = {
             "menus": [{
                 "menuid": "41",
                 "menuname": "借书",
-                "url": "bookManager"
+                "url": "borrowBookManager"
             },
                 {
                     "menuid": "42",
                     "menuname": "还书",
-                    "url": "bookManager"
+                    "url": "dueBookManager"
                 }
             ]
         }

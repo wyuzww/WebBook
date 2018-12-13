@@ -73,6 +73,11 @@
 
 
         function openAddBookDialog() {
+            $('#book_catagoryId').combobox({
+                valueField: 'bookcatagory_id',
+                textField: 'bookcatagory_name',
+                url: 'bookcatagory?flagText=allBookCatagoryList'
+            });
             $("#dlg").dialog("open").dialog("setTitle", "添加图书");
             resetValue();
             url = "book?flagText=add";
@@ -91,7 +96,9 @@
                         return false;
                     }
 
-                    if ($('#book_stockNumber').val() < $('#book_inNumber').val()) {
+                    // alert($('#book_stockNumber').validatebox("getValue"));
+
+                    if (parseInt($('#book_stockNumber').val()) < parseInt($('#book_inNumber').val())) {
                         $.messager.alert("系统提示", "可借数量不能大于入库数量");
                         return false;
                     }
@@ -145,6 +152,11 @@
         }
 
         function openUpdateBookDialog() {
+            $('#book_catagoryId').combobox({
+                valueField: 'bookcatagory_id',
+                textField: 'bookcatagory_name',
+                url: 'bookcatagory?flagText=allBookCatagoryList'
+            });
             var selectedRows = $("#dg").datagrid('getSelections');
             if (selectedRows.length != 1) {
                 $.messager.alert("系统提示", "请选择一条要编辑的数据！");
@@ -215,7 +227,7 @@
             </tr>
             <tr>
                 <td>价格：</td>
-                <td><input type="text" name="book_price" id="book_price" class="easyui-validatebox" required="true"/>
+                <td><input type="number" name="book_price" id="book_price" class="easyui-validatebox" required="true"/>
                 </td>
                 <td>出版商：</td>
                 <td><input type="text" name="book_publish" id="book_publish" class="easyui-validatebox"
@@ -231,10 +243,10 @@
             </tr>
             <tr>
                 <td>入库数量：</td>
-                <td><input type="text" name="book_stockNumber" id="book_stockNumber" class="easyui-validatebox"
+                <td><input type="number" name="book_stockNumber" id="book_stockNumber" class="easyui-validatebox"
                            required="true"/></td>
                 <td>可借数量：</td>
-                <td><input type="text" name="book_inNumber" id="book_inNumber" class="easyui-validatebox"
+                <td><input type="number" name="book_inNumber" id="book_inNumber" class="easyui-validatebox"
                            required="true"/></td>
             </tr>
         </table>

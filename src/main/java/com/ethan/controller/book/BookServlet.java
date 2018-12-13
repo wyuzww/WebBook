@@ -63,7 +63,7 @@ public class BookServlet extends HttpServlet {
 
             try {
                 book_catagory_rooms = bookService.allBook(book, Integer.parseInt(page), Integer.parseInt(rows));
-                total = book_catagory_rooms.size();
+                total = bookService.bookCount(book);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -154,7 +154,6 @@ public class BookServlet extends HttpServlet {
 
 
         } else {
-            request.setAttribute("error", "选项不能为空！");
             response.sendRedirect("error");
         }
 

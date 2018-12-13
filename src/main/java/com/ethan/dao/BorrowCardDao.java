@@ -17,4 +17,6 @@ public interface BorrowCardDao {
     public int deleteBC(String ids) throws SQLException;
 
     public int addBC(BorrowCard borrowCard) throws SQLException;
+
+    public int borrowbBook(BorrowCard borrowCard, int a) throws SQLException;
 }

@@ -61,4 +61,11 @@ public class BookServiceImpl implements BookService {
 
         return code;
     }
+
+    @Override
+    public int borrowbBook(Book book, int a) throws SQLException {
+        int code = 0;
+        code = bookDao.borrowbBook(book, a);
+        return code;
+    }
 }

@@ -51,4 +51,18 @@ public class BorrowCardDaoImpl extends BaseDao implements BorrowCardDao {
         int code = queryRunner.update(sql, borrowCard.getBorrowcard_id(), borrowCard.getBorrowcard_rid(), borrowCard.getBorrowcard_quantity(), borrowCard.getBorrowcard_blid());
         return code;
     }
+
+    @Override
+    public int borrowbBook(BorrowCard borrowCard, int a) throws SQLException {
+        int code = 0;
+        if (a == 0) {//还书
+            String sql = "update borrowcard set borrowcard_quantity=borrowcard_quantity-1 where borrowcard_id=?";
+            code = queryRunner.update(sql, borrowCard.getBorrowcard_id());
+        } else {
+            String sql = "update borrowcard set borrowcard_quantity=borrowcard_quantity+1 where borrowcard_id=?";
+            code = queryRunner.update(sql, borrowCard.getBorrowcard_id());
+        }
+
+        return code;
+    }
 }

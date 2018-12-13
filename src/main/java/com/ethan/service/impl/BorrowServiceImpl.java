@@ -24,6 +24,14 @@ public class BorrowServiceImpl implements BorrowService {
     }
 
     @Override
+    public List<AllEntity> notDueBorrow(Borrow borrow, int page, int rows) throws SQLException {
+        List<AllEntity> borrows = null;
+        borrows = borrowDao.notDueBorrow(borrow, page, rows);
+
+        return borrows;
+    }
+
+    @Override
     public int deleteBorrow(String ids) throws SQLException {
         int code = 0;
         code = borrowDao.deleteBorrow(ids);
@@ -43,4 +51,37 @@ public class BorrowServiceImpl implements BorrowService {
         code = borrowDao.addBorrow(borrow);
         return code;
     }
+
+    @Override
+    public Borrow findBorrow(Borrow borrow) throws SQLException {
+        Borrow borrowResult = null;
+        borrowResult = borrowDao.findBorrow(borrow);
+
+        return borrowResult;
+    }
+
+    @Override
+    public int dueBorrow(Borrow borrow) throws SQLException {
+        int code = 0;
+        code = borrowDao.dueBorrow(borrow);
+
+        return code;
+    }
+
+    @Override
+    public AllEntity findUserBorrow(Borrow borrow) throws SQLException {
+        AllEntity allEntity = null;
+        allEntity = borrowDao.findUserBorrow(borrow);
+
+        return allEntity;
+    }
+
+    @Override
+    public AllEntity findUserDueBorrow(Borrow borrow) throws SQLException {
+        AllEntity allEntity = null;
+        allEntity = borrowDao.findUserDueBorrow(borrow);
+
+        return allEntity;
+    }
+
 }

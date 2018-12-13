@@ -21,6 +21,8 @@ public interface BorrowDao {
      */
     public List<AllEntity> allBorrow(Borrow borrow, int page, int rows) throws SQLException;
 
+    public List<AllEntity> notDueBorrow(Borrow borrow, int page, int rows) throws SQLException;
+
     /**
      * @param ids
      * @return
@@ -36,4 +38,13 @@ public interface BorrowDao {
     public int updateBorrow(Borrow borrow) throws SQLException;
 
     public int addBorrow(Borrow borrow) throws SQLException;
+
+    public int dueBorrow(Borrow borrow) throws SQLException;
+
+    public Borrow findBorrow(Borrow borrow) throws SQLException;
+
+    public AllEntity findUserBorrow(Borrow borrow) throws SQLException;
+
+    public AllEntity findUserDueBorrow(Borrow borrow) throws SQLException;
+
 }

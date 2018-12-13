@@ -95,8 +95,28 @@ public class BorrowCardServlet extends HttpServlet {
             }
 
 
+        } else if (flagText != null && flagText.equals("allBorrowCardList")) {
+            List<AllEntity> borrowCards = null;
+            int total = 0;
+
+            try {
+                borrowCards = borrowCardService.allBorrowCard(borrowCard, 0, 0);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            result = JSON.toJSONString(borrowCards);
+            if (result != null) {
+                try {
+                    ResponseUtil.write(response, result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return;
+
         } else {
-            request.setAttribute("error", "选项不能为空！");
             response.sendRedirect("error");
         }
 

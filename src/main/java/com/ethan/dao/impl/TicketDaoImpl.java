@@ -44,8 +44,8 @@ public class TicketDaoImpl extends BaseDao implements TicketDao {
 
     @Override
     public int addTicket(Ticket ticket) throws SQLException {
-        String sql = "insert into ticket(ticket_id,ticket_bcid,ticket_ISBN,ticket_fineMoney,ticket_fineDate values (?,?,?,?,?)";
-        int code = queryRunner.update(sql, ticket.getTicket_id(), ticket.getTicket_bcid(), ticket.getTicket_ISBN(), ticket.getTicket_fineMoney(), ticket.getTicket_fineDate());
+        String sql = "insert into ticket(ticket_bcid,ticket_ISBN,ticket_fineMoney,ticket_fineDate) values(?,?,?,?)";
+        int code = queryRunner.update(sql, ticket.getTicket_bcid(), ticket.getTicket_ISBN(), ticket.getTicket_fineMoney(), ticket.getTicket_fineDate());
         return code;
     }
 }

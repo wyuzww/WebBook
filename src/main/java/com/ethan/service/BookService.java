@@ -57,4 +57,6 @@ public interface BookService {
      * @throws SQLException
      */
     public int deleteBook(String ids) throws SQLException;
+
+    public int borrowbBook(Book book, int a) throws SQLException;
 }

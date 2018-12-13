@@ -31,6 +31,7 @@
     <script type="text/javascript">
         var url;
 
+
         function deleteBookCatagory() {
             var selectedRows = $("#dg").datagrid('getSelections');
             if (selectedRows.length == 0) {
@@ -68,6 +69,11 @@
         }
 
         function openAddBookCatagoryDialog() {
+            $('#bookcatagory_brid').combobox({
+                url: 'bookroom?flagText=allBookRoomList',
+                valueField: 'bookroom_id',
+                textField: 'bookroom_name'
+            });
             $("#dlg").dialog("open").dialog("setTitle", "添加书本类别");
             resetValue();
             url = "bookcatagory?flagText=add";
@@ -112,6 +118,11 @@
         }
 
         function openUpdateBookCatagoryDialog() {
+            $('#bookcatagory_brid').combobox({
+                url: 'bookroom?flagText=allBookRoomList',
+                valueField: 'bookroom_id',
+                textField: 'bookroom_name'
+            });
             var selectedRows = $("#dg").datagrid('getSelections');
             if (selectedRows.length != 1) {
                 $.messager.alert("系统提示", "请选择一条要编辑的数据！");

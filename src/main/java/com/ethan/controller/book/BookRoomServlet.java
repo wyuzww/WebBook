@@ -44,8 +44,6 @@ public class BookRoomServlet extends HttpServlet {
             String bookroom_name = request.getParameter("bookroom_name");
             bookRoom.setBookroom_name(bookroom_name);
 
-//            System.out.println(book_catagory_room.toString());
-
             List<BookRoom> bookRooms = null;
             int total = 0;
 
